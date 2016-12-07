@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1053801688421",
+    "firebase_url": "https://twitterauthfirebase.firebaseio.com",
+    "project_id": "twitterauthfirebase",
+    "storage_bucket": "twitterauthfirebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1053801688421:android:a365c2343f4b62c3",
+        "android_client_info": {
+          "package_name": "com.reversebits.projects.app.twitterauthfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1053801688421-o0ddo0e39qogs1uha7q8pl6c7en87uoi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.reversebits.projects.app.twitterauthfirebase",
+            "certificate_hash": "B02560BB1BB947F401023DE690D82D42E0C40962"
+          }
+        },
+        {
+          "client_id": "1053801688421-pu77sigl446hgn6kc5pdvk6rl5hgc2nk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbWjnP5uZyTGRDxpkyZmv80SkFrSP3lwA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1053801688421-pu77sigl446hgn6kc5pdvk6rl5hgc2nk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
