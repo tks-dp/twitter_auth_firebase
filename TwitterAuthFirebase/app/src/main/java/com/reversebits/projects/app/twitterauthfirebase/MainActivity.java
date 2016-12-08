@@ -30,8 +30,10 @@ import com.twitter.sdk.android.core.TwitterException;
 import com.twitter.sdk.android.core.TwitterSession;
 import com.twitter.sdk.android.core.identity.TwitterAuthClient;
 import com.twitter.sdk.android.core.identity.TwitterLoginButton;
+import com.twitter.sdk.android.core.models.User;
 
 import de.hdodenhof.circleimageview.CircleImageView;
+import retrofit2.Call;
 
 
 /**
@@ -61,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
     private int isUserLogin;
 
     private String user_name, user_email, user_pic;
+    private TwitterSession session;
 
 
     @Override
@@ -112,9 +115,6 @@ public class MainActivity extends AppCompatActivity {
 
         if (isUserLogin == 1) {
             //launch profile screen
-            Log.e("USER", " name : " + Other.loadStringPref(this, PrefKey.USER_NAME) + " : " +
-                    "email : " + Other.loadStringPref(this, PrefKey.USER_EMAIL) + " : " +
-                    " :  pic : " + Other.loadStringPref(this, PrefKey.USER_PIC));
 
             manageProfile(1);
 
@@ -126,9 +126,6 @@ public class MainActivity extends AppCompatActivity {
             });
 
         } else {
-            Log.e("USER", " name : " + Other.loadStringPref(this, PrefKey.USER_NAME) + " : " +
-                    "email : " + Other.loadStringPref(this, PrefKey.USER_EMAIL) + " : " +
-                    " :  pic : " + Other.loadStringPref(this, PrefKey.USER_PIC));
 
             manageProfile(0);
 
@@ -190,8 +187,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void success(Result<TwitterSession> result) {
                 Log.d("TwitterKit", "Login with Twitter successfully");
-                TwitterSession session = result.data;
+                session = result.data;
+
+
                 getEmailFromTwitter(session);
+
+
             }
 
             @Override
@@ -200,10 +201,30 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
     }
 
     //STEP : Asking for user Email address
     private void getEmailFromTwitter(final TwitterSession session) {
+
+        Call<User> user = TwitterCore.getInstance().getApiClient().getAccountService().verifyCredentials(true, false);
+        user.enqueue(new Callback<User>() {
+            @Override
+            public void success(Result<User> userResult) {
+
+                user_pic = userResult.data.profileImageUrl.replace("_normal", "");
+
+
+                Log.e("pic", "success: " + user_pic);
+            }
+
+            @Override
+            public void failure(TwitterException exc) {
+                Log.d("TwitterKit", "Verify Credentials Failure", exc);
+            }
+        });
+
+
         authClient.requestEmail(session, new Callback<String>() {
             @Override
             public void success(Result<String> result) {
@@ -244,7 +265,7 @@ public class MainActivity extends AppCompatActivity {
                                         if (task.isSuccessful()) {
                                             user_name = authResultTask.getResult().getUser().getDisplayName();
                                             user_email = authResultTask.getResult().getUser().getEmail();
-                                            user_pic = authResultTask.getResult().getUser().getPhotoUrl().toString();
+//                                            user_pic = authResultTask.getResult().getUser().getPhotoUrl().toString();
                                             managePref(1);
                                         }
                                     }
