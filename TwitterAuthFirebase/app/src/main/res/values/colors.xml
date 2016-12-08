@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#F2C14E</color>
+    <color name="colorPrimaryDark">#F2C14E</color>
+    <color name="colorAccent">#4D9078</color>
+    <color name="about_instagram_color">#3f729b</color>
 </resources>

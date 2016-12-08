@@ -12,9 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+        <!--TODO : Add your fabric key-->
         <meta-data
             android:name="io.fabric.ApiKey"
-            android:value="8bbb52d6c4023378ff37ae76ac574f24d4519dad" />
+            android:value="3315d23010cbafeb28c6c0b8e7ca52d3d366f139" />
 
 
         <activity android:name=".MainActivity">
