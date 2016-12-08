@@ -6,18 +6,21 @@ Here is Tutorial and this demo is made for it's reference:
 
 https://goo.gl/10fKKP
 
-1)Login Screen
+1) Login Screen
 
 ![Alt text](https://github.com/reverseBitsTech/twitter_auth_firebase/blob/master/login%20screen.png "Login Screen")
 
-2)Auth Permission
+
+2) Auth Permission
 
 ![Alt text](https://github.com/reverseBitsTech/twitter_auth_firebase/blob/master/auth%20permission.png "Auth Permission")
 
-3)Email permission
+
+3) Email permission
 
 ![Alt text](https://github.com/reverseBitsTech/twitter_auth_firebase/blob/master/email%20permission.png "Email Permission")
 
-4)Profile Screen
+
+4) Profile Screen
 
 ![Alt text](https://github.com/reverseBitsTech/twitter_auth_firebase/blob/master/profile%20screen.png "Profile screen")
