@@ -22,3 +22,12 @@ Demo of twitter authentication with Firebase
 4) Profile Screen
 
 ![Alt text](https://github.com/reverseBitsTech/twitter_auth_firebase/blob/master/profile%20screen.png "Profile screen")
+
+
+[Follow us on Medium](https://medium.com/reversebits)
+
+and [twitter](https://twitter.com/reverseBitsTech)
+
+##Have project in mind?
+
+Contact : ceo@reversebits.tech
