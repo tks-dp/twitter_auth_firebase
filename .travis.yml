@@ -1,5 +1,6 @@
 # from https://github.com/codepath/android_guides/wiki/Setting-up-Travis-CI
 language: android
+sudo: required
 android:
   components:
     - tools # to get the new `repository-11.xml`
@@ -7,6 +8,8 @@ android:
     - platform-tools
     - build-tools-24.0.2
     - android-24
+     - extra-google-m2repository
+     - extra-android-m2repository
 
 script:
    - ./gradlew build connectedCheck
