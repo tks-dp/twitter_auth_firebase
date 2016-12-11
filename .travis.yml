@@ -16,4 +16,4 @@ before_script:
  - chmod +x TwitterAuthFirebase/gradlew
 
 script:
-   - ./TwitterAuthFirebase/gradlew build connectedCheck
+   - ./TwitterAuthFirebase/gradlew build tasks
