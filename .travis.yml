@@ -13,7 +13,7 @@ android:
      
 # from http://stackoverflow.com/questions/33820638/travis-yml-gradlew-permission-denied
 before_script:
- - chmod +x gradlew
+ - chmod +x TwitterAuthFirebase/gradlew
 
 script:
    - ./TwitterAuthFirebase/gradlew build connectedCheck
