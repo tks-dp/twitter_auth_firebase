@@ -1,5 +1,5 @@
 # Twitter Authentication using Firebase
-[![Build Status on Travis:](https://travis-ci.org/roboguice/roboguice.svg?branch=master)](https://travis-ci.org/tks-dp/twitter_auth_firebase)
+[![Build Status on Travis:](https://travis-ci.org/tks-dp/twitter_auth_firebase.svg?branch=tks-dp-travis-ci)](https://travis-ci.org/tks-dp/twitter_auth_firebase)
 
 Demo of twitter authentication with Firebase
 
